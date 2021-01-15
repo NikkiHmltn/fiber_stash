@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Fiber
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
+from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
@@ -18,6 +18,11 @@ def fiber_index(request):
 def fiber_show(request, fiber_id):
     fiber = Fiber.objects.get(id=fiber_id)
     return render(request, 'fiber/show.html', {'fiber': fiber})
+
+def profile(req, username):
+    user = User.objects.get(username=username)
+    fiber - Fiber.objects.filter(user=user)
+    return render(request, 'profile.html', {'username': username, 'fiber': fiber})
 
 class FiberCreate(CreateView):
   model = Fiber
@@ -41,3 +46,5 @@ class FiberUpdate(UpdateView):
 class FiberDelete(DeleteView):
   model = Fiber
   success_url = '/fiber'
+
+

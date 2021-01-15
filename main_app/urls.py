@@ -8,4 +8,5 @@ urlpatterns = [
     path('fiber/create/', views.FiberCreate.as_view(), name="fiber_create"),
     path('fiber/<int:pk>/update', views.FiberUpdate.as_view(), name="fiber_update"),
     path('fiber/<int:pk>/delete', views.FiberDelete.as_view(), name="fiber_delete"),
+    path('user/<username>', views.profile, name='profile')
 ]

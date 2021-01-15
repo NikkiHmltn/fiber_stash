@@ -15,6 +15,7 @@
     {% for fiber in fiber %}
     <p>Type: {{fiber.types}}</p>
     <p>Texture: {{fiber.texture}}</p>
+    <p>Owned By: {{fiber.user.username}}</p>
     {% endfor %}
     {% endblock %}
     <footer>All Rights Reserved, FiberStash 2021</footer>
