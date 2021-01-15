@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber Stash</title>
+</head>
+<body>
+    <h2>Type: {{fiber.types}}</h2>
+    <p>Micron: {{fiber.micron}}</p>
+    <p>Description: {{fiber.description}}</p>
+    <p>Texture: {{fiber.texture}}</p>
+    <a href="{% url 'fiber_update' fiber.id %}">Update Details</a>
+    <a href="{% url 'fiber_delete' fiber.id %}">Delete This Fiber</a>
+</body>
+</html>

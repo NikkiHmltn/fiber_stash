@@ -1,4 +1,5 @@
-{% load staticfiles %}
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,15 @@
     <title>FiberStash</title>
 </head>
 <body>
+    {% block content %}
+    <a href="/fiber/create">Add a New Fiber</a>
     <h1>The Stash of Fiber</h1>
     <hr />
     {% for fiber in fiber %}
     <p>Type: {{fiber.types}}</p>
     <p>Texture: {{fiber.texture}}</p>
     {% endfor %}
+    {% endblock %}
     <footer>All Rights Reserved, FiberStash 2021</footer>
 </body>
 </html>
