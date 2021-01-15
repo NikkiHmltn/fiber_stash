@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiberStash</title>
+</head>
+<body>
+    <h1>The Stash of Fiber</h1>
+    <hr />
+    {% for fiber in fiber %}
+    <p>Type: {{fiber.types}}</p>
+    <p>Texture: {{fiber.texture}}</p>
+    {% endfor %}
+    <footer>All Rights Reserved, FiberStash 2021</footer>
+</body>
+</html>
